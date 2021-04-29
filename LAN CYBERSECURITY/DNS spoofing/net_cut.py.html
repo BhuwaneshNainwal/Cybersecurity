@@ -1,0 +1,18 @@
+<html><head>
+<title>net_cut.py</title>
+<meta name="Generator" content="htmlizer/[Twisted, version 18.9.0]" />
+<link rel="alternate" href="net_cut.py" type="text/x-python" />
+
+</head>
+<body>
+<pre><span class="py-src-comment">#!/usr/bin/env python</span>
+<span class="py-src-keyword">import</span> <span class="py-src-variable">netfilterqueue</span>
+
+<span class="py-src-keyword">def</span> <span class="py-src-identifier">process_packet</span>(<span class="py-src-parameter">packet</span>):
+    <span class="py-src-keyword">print</span>(<span class="py-src-variable">packet</span>)
+
+<span class="py-src-variable">queue</span> = <span class="py-src-variable">netfilterqueue</span>.<span class="py-src-variable">NetfilterQueue</span>()
+<span class="py-src-variable">queue</span>.<span class="py-src-variable">bind</span>(<span class="py-src-number">0</span>, <span class="py-src-variable">process_packet</span>)
+<span class="py-src-variable">queue</span>.<span class="py-src-variable">run</span>
+</pre>
+</body>
